@@ -1,7 +1,7 @@
 ---
-title: 10月31日：第一天
+title: 11月2日
 date: 2023-10-31 19:42:00
-tags: [日记,10月,2023年]
+tags: [日记,11月,2023年]
 categories: 日记
 description: 本文中可能含有对抑郁、焦虑和自杀等内容的描写，可能并不适于所有人体验。请阅览者自行判断。
 top_img: /img/diary_top_img.jpg
