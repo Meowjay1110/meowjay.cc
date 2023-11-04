@@ -1,6 +1,7 @@
 ---
 title: 英语演讲2023：文件、稿件配布及一些想说的话
 date: 2023-11-03 08:56:14
+updated: 2023-11-04 20:35:00
 tags: [文档,2023年,11月]
 cover: /img/cover_20231103_01.jpg
 top_img: false
@@ -25,4 +26,4 @@ Sakaanction是一支出色的乐队，其主唱山口一郎的故事更是无比
 如果你对日式摇滚感兴趣，欢迎在网易云音乐搜索“sakanaction”，或者在Bilibili上看他们的MV。他们在不少社交平台上也有号：
 微博：[https://weibo.com/u/7097667053](https://weibo.com/u/7097667053)
 X: [https://twitter.com/sakanaction](https://twitter.com/sakanaction)
-欢迎各位成为鱼韵的听众！
+期待各位成为鱼韵的听众！
