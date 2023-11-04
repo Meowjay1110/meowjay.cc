@@ -39,7 +39,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: meowjay1110.github.io
+      url: github.com/Meowjay1110/Meowjay1110.github.io
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
