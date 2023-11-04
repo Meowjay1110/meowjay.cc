@@ -3,7 +3,7 @@ name: Pages
 on:
   push:
     branches:
-      - main # default branch
+      - main  # default branch
 
 jobs:
   build:
@@ -13,6 +13,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
       - name: Use Node.js 20.x
         uses: actions/setup-node@v2
         with:
@@ -39,7 +40,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: github.com/Meowjay1110/Meowjay1110.github.io
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
