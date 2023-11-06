@@ -2,8 +2,8 @@
 
 hexo.config.hide_posts.acl_function_per_post = function (post, generatorName) {
     // 在 front-matter 中标记为 `acl: to-ame` 的文章只能通过网址访问
-    if (post.acl === 'to-ame') {
-      return false;
+    if (post.toame) {
+      return generatorName !== 'index';
     }
   
     // 标记为 `hidden: true` 的文章在主页隐藏
