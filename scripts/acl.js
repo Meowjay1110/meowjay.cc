@@ -1,7 +1,7 @@
 // FILE: scripts/acl.js
 
 hexo.config.hide_posts.acl_function_per_post = function (post, generatorName) {
-    // 在 front-matter 中标记为 `acl: to-ame` 的文章不会出现
+    // 在 front-matter 中标记为 `acl: to-ame` 的文章只能通过网址访问
     if (post.acl === 'to-ame') {
       return false;
     }
