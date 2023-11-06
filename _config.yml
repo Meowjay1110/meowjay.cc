@@ -108,6 +108,3 @@ deploy:
 
 hide_posts:
   enable: true
-  # 更多黑白名单的高级配置示例，可以在 `lib/isGeneratorAllowed.test.js` 文件中查看
-  allowlist_generators: ['*']
-  blocklist_generators: ['index']
