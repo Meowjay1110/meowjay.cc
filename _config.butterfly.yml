@@ -265,7 +265,7 @@ aside:
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
   card_post_series:
-    enable: true
+    enable: false
     orderBy: 'date' # Order by title or date
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
