@@ -175,10 +175,10 @@ reward:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit:
-  enable: false
+  enable: true
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/meowjay1110/butterfly.js.org/edit/main/source/
-  url: https://github.com/Meowjay1110/Meowjay1110.github.io/edit/main/source/
+  url: https://github.com/Meowjay1110/meowjay1110.github.io/edit/main/source/
 
 # Related Articles
 related_post:
@@ -208,7 +208,7 @@ footer:
   owner:
     enable: true
     since: 2023
-  custom_text:
+  custom_text: 试图与自己和解
   copyright: true # Copyright of theme and framework
 
 # aside (側邊欄)
@@ -676,7 +676,7 @@ canvas_ribbon:
   alpha: 0.6
   zIndex: -1
   click_to_change: true
-  mobile: true
+  mobile: false
 
 # Fluttering Ribbon (動態彩帶)
 canvas_fluttering_ribbon:
@@ -721,10 +721,10 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
+  enable: true
   field: post # site/post
-  title-prefix-icon: # '\f0c1'
-  title-prefix-icon-color: # '#F47466'
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: '#F47466'
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
