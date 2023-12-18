@@ -208,7 +208,7 @@ footer:
   owner:
     enable: true
     since: 2023
-  custom_text: 试图与自己和解
+  custom_text:
   copyright: true # Copyright of theme and framework
 
 # aside (側邊欄)
