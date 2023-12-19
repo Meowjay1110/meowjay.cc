@@ -6,5 +6,5 @@ tags:
 series:
 categories:
 cover:
-hidden:
+hidden: false
 ---
