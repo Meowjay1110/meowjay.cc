@@ -3,7 +3,7 @@ title: 英语演讲2023Refresh - 浅谈音乐抄袭：文件、稿件配布及�
 date: 2023-12-28 08:00:00
 updated: 2023-12-28 08:00:00
 cover: /img/english-speech-refresh-cover-4by3.png
-hidden: true
+hidden: false
 tags: [文档,音乐,演讲,2023年,12月]
 ---
 
