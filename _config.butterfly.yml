@@ -87,7 +87,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - https://github.com/Meowjay1110/Meowjay1110.github.io/blob/5e5c6ae6a312613ad52defd2ec94b26eee9e9753/img/defaut_cover_img.png
+    - /img/defaut_cover_img.png
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
