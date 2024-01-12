@@ -14,7 +14,7 @@ menu:
   标签: /tags/ || fas fa-tags
   留言板: /messageboard/ || fas fa-message
   生活 || fas fa-fire:
-    日记: /categories/日记/ || fas fa-book
+    日记: /warning-diary/ || fas fa-book
     日常: /daily/ || fas fa-dna
   关于: /about/ || fas fa-heart
 
@@ -241,14 +241,14 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: true
+    enable: false
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     orderby: random # Order of tags, random/name/length
     order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
     sort_order: # Don't modify the setting unless you know how it works
