@@ -14,6 +14,6 @@ top_img: /img/warning.jpg
 您确定要继续浏览吗？
 
 <div class="btn-center">
-{% btn '/categories/日记/',是,fas fa-check, red larger %} 
+{% btn '/diary/',是,fas fa-check, red larger %}
 {% btn '/',否,fas fa-xmark, green larger %}
 </div>
