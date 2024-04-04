@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: google554ef2f51dec6049.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -124,5 +124,3 @@ hide_posts:
   # 设置黑名单，黑名单中的 generator 不可以访问隐藏文章
   # 如果同时设置了黑名单和白名单，白名单的优先级更高
   blocklist_generators: ['index','archive','sitemap'] 
-
-skip_render: google554ef2f51dec6049.html
