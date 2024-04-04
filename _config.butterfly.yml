@@ -176,7 +176,7 @@ post_edit:
   enable: true
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/meowjay1110/butterfly.js.org/edit/main/source/
-  url: https://github.com/Meowjay1110/meowjay1110.github.io/edit/main/source/
+  url: https://github.com/Meowjay1110/meowjay.cc/edit/main/source/
 
 # Related Articles
 related_post:
@@ -479,7 +479,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://meowjay-twikoo.hf.space
+  envId: https://twikoo.meowjay.cc
   region:
   visitor: false
   option:
