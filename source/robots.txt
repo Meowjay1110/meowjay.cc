@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /daily/
-Disallow: /diary/
-Disallow: /warning-diary/
 Sitemap: https://meowjay.cc/sitemap.xml
