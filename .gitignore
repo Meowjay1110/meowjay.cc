@@ -6,3 +6,4 @@ public/
 .deploy_git/
 node_modules
 source/_drafts
+.vscode
