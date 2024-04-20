@@ -21,6 +21,7 @@ cover: /img/top_image.png
 
 ## 歌词
 
+```text
 曾设想那个孩子如此温柔体贴
 
 天使一般
@@ -52,6 +53,7 @@ cover: /img/top_image.png
 不断探求却无法消除
 
 自己却也变成梦魇模样
+```
 
 ## 著作权相关
 
