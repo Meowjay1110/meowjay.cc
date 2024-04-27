@@ -7,7 +7,7 @@ tags:
   - 新曲发布
 series: 新曲发布
 categories: 音乐创作
-cover: /img/top_image.png
+cover: /img/cover4.png
 ---
 > 愿我们都不再是彼此的梦魇。
 
