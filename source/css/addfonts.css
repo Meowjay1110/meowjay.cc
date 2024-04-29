@@ -4,8 +4,3 @@
     src: url('/fonts/LXGWNeoXiHei.ttf') format("truetype");
   }
 
-@font-face {
-    font-family: 'LXGWNeoZhiSong';
-    font-display: swap;
-    src: url('/fonts/LXGWNeoZhiSong.ttf') format("truetype");
-  }
