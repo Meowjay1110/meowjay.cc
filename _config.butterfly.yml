@@ -916,6 +916,7 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
       - <link rel="stylesheet" href="/css/custom.css">
       - <link rel="stylesheet" href="/css/addfonts.css">
+      - <script type="text/javascript" src="/js/vercel_analytics.js"></script>
   bottom:
     # - <script src="xxxx"></script>
 
