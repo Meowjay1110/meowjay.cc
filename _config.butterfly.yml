@@ -914,8 +914,8 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-      - <link rel="stylesheet" href="/css/custom.css">
-      - <link rel="stylesheet" href="/css/addfonts.css">
+      - <link rel="stylesheet" href="/css/custom.css" media="only x" onload="this.onload=null;this.media='all'">
+      - <link rel="stylesheet" href="/css/addfonts.css" media="only x" onload="this.onload=null;this.media='all'">
   bottom:
     # - <script src="xxxx"></script>
       - <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
