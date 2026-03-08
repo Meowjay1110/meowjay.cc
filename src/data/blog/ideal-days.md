@@ -4,6 +4,7 @@ pubDatetime: 2026-03-08T12:14:00Z
 description: 理想的日常到底应该是什么样的？
 tags:
   - Blogblog同乐会
+draft: true
 ---
 > 这是我的「[BlogBlog 同乐会 - 2026 年 3 月](https://blogblog.club/party)」的投稿文章。本月主题是「[理想的日常](https://alexhsu.com/perfect-days)」，由 [Alex Hsu](https://alexhsu.com/) 主持。如果你有自己的博客，欢迎一起来参加！
 

@@ -69,32 +69,32 @@ export default defineConfig({
           variants: [
             {
               style: "normal",
-              weight: 300,
+              weight: "300 400",
               src: ["./src/assets/fonts/LXGWBright-Light.woff2"],
             },
             {
               style: "italic",
-              weight: 300,
+              weight: "300 400",
               src: ["./src/assets/fonts/LXGWBright-LightItalic.woff2"],
             },
             {
               style: "normal",
-              weight: 500,
+              weight: "500 600",
               src: ["./src/assets/fonts/LXGWBright-Medium.woff2"],
             },
             {
               style: "italic",
-              weight: 500,
+              weight: "500 600",
               src: ["./src/assets/fonts/LXGWBright-MediumItalic.woff2"],
             },
             {
               style: "normal",
-              weight: 700,
+              weight: "700 800",
               src: ["./src/assets/fonts/LXGWBright-Regular.woff2"],
             },
             {
               style: "italic",
-              weight: 700,
+              weight: "700 800",
               src: ["./src/assets/fonts/LXGWBright-Italic.woff2"],
             }
           ]
