@@ -61,12 +61,44 @@ export default defineConfig({
     preserveScriptOrder: true,
     fonts: [
       {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
+        name: "LXGW Bright",
+        cssVariable: "--font-lxgw-bright",
+        fallbacks: ["serif"],
+        provider: fontProviders.local(),
+        options: {
+          variants: [
+            {
+              style: "normal",
+              weight: 300,
+              src: ["./src/assets/fonts/LXGWBright-Light.woff2"],
+            },
+            {
+              style: "italic",
+              weight: 300,
+              src: ["./src/assets/fonts/LXGWBright-LightItalic.woff2"],
+            },
+            {
+              style: "normal",
+              weight: 500,
+              src: ["./src/assets/fonts/LXGWBright-Medium.woff2"],
+            },
+            {
+              style: "italic",
+              weight: 500,
+              src: ["./src/assets/fonts/LXGWBright-MediumItalic.woff2"],
+            },
+            {
+              style: "normal",
+              weight: 700,
+              src: ["./src/assets/fonts/LXGWBright-Regular.woff2"],
+            },
+            {
+              style: "italic",
+              weight: 700,
+              src: ["./src/assets/fonts/LXGWBright-Italic.woff2"],
+            }
+          ]
+        },
       },
     ],
   },
