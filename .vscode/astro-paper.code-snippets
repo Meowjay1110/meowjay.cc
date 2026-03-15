@@ -25,7 +25,7 @@
       "",
       "${2: Introductory Sentence}",
       "",
-      "## 目录",
+      "## Table of contents",
       "",
       "## ${3: heading 1}",
     ],
