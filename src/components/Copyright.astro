@@ -1,0 +1,61 @@
+---
+import { DEFAULT_COPYRIGHT } from "@/constants";
+import LinkButton from "./LinkButton.astro";
+
+interface Props {
+  copyright?: string;
+}
+
+const { copyright } = Astro.props;
+
+let copyrightInfo = DEFAULT_COPYRIGHT;
+let isStrict = false;
+let isCustom = false;
+
+if (copyright) {
+  const normalizedCopyright = copyright.trim().toLowerCase();
+  if (normalizedCopyright === "strict") {
+    isStrict = true;
+  } else if (normalizedCopyright.startsWith("cc")) {
+    isCustom = true;
+    // 解析 CC 协议
+    // 预期格式: "CC BY-NC-SA 4.0" 或 "CC BY-NC-SA"
+    const parts = copyright.split(" ");
+    const type = parts[1]?.toLowerCase() || "by-nc-nd";
+    const version = parts[2] || "4.0";
+    copyrightInfo = {
+      name: copyright,
+      href: `https://creativecommons.org/licenses/${type}/${version}/`,
+    };
+  }
+}
+---
+
+{
+  isStrict ? (
+    <>
+      <p class="font-bold text-red-600 dark:text-red-400">
+        <span class="mr-2">🚫</span>此文章不开放转载和再创作
+      </p>
+    </>
+  ) : (
+    <>
+      {isCustom && (
+        <p class="mb-2 font-bold text-accent">
+          <span class="mr-2">✨</span>此文章以不同的协议进行授权
+        </p>
+      )}
+      <p>
+        本文章以
+        <LinkButton
+          href={copyrightInfo.href}
+          class="font-medium underline decoration-accent/30 decoration-dashed underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+          title={copyrightInfo.name}
+        >
+          {copyrightInfo.name}
+        </LinkButton>
+        许可协议进行授权。
+      </p>
+    </>
+  )
+}

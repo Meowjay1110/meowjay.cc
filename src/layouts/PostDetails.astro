@@ -13,6 +13,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import Copyright from "@/components/Copyright.astro";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -32,6 +33,7 @@ const {
   timezone,
   tags,
   hideEditPost,
+  copyright,
 } = post.data;
 
 const { Content } = await render(post);
@@ -122,6 +124,10 @@ const nextPost =
     </ul>
 
     <BackToTopButton />
+
+    <Copyright {copyright} />
+
+    <hr class="my-6 border-dashed" />
 
     <!-- Previous/Next Post Buttons -->
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">

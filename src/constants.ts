@@ -2,14 +2,17 @@ import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBilibili from "@/assets/icons/IconBilibili.svg";
-import IconTelegram from "@/assets/icons/IconTelegram.svg";
-import IconPinterest from "@/assets/icons/IconPinterest.svg";
 
 interface Social {
   name: string;
   href: string;
   linkTitle: string;
   icon: (_props: Props) => Element;
+}
+
+interface Copyright {
+  name: string;
+  href: string;
 }
 
 export const SOCIALS: Social[] = [
@@ -33,11 +36,7 @@ export const SOCIALS: Social[] = [
   },
 ] as const;
 
-export const SHARE_LINKS: Social[] = [
-  {
-    name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `在邮件中分享这篇文章`,
-    icon: IconMail,
-  }
-] as const;
+export const DEFAULT_COPYRIGHT: Copyright = {
+  name: "CC BY-NC-ND 4.0",
+  href: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+};

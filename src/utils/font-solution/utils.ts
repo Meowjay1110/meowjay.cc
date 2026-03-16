@@ -30,7 +30,6 @@ export interface FontFaceData {
  * 严格对齐 Astro 官方提供程序的返回结构
  */
 export async function getZeoSevenFontFaceData(cssUrl: string): Promise<{ fonts: FontFaceData[] }> {
-  console.log(`[ZeoSeven] Loading CSS from: ${cssUrl}`);
   try {
     const response = await fetch(cssUrl);
 
@@ -114,7 +113,6 @@ export async function getZeoSevenFontFaceData(cssUrl: string): Promise<{ fonts: 
       fontFaceRules.push(fontData);
     }
 
-    console.log(`[ZeoSeven] Successfully parsed ${fontFaceRules.length} font-face rules.`);
     return { fonts: fontFaceRules };
   } catch (error) {
     console.error("[ZeoSeven] Error during parsing:", error);
@@ -126,7 +124,6 @@ export async function getZeoSevenFontFaceData(cssUrl: string): Promise<{ fonts: 
  * 同时从多个 ZeoSeven 字体 API 的 CSS 链接中获取并合并字体数据
  */
 export async function getZeoSevenFontFaceDataList(cssUrls: string[]): Promise<{ fonts: FontFaceData[] }> {
-  console.log(`[ZeoSeven] Loading multiple CSS files: ${cssUrls.length} targets`);
   const allFonts: FontFaceData[] = [];
   
   // 使用 Promise.all 并行获取
@@ -136,6 +133,5 @@ export async function getZeoSevenFontFaceDataList(cssUrls: string[]): Promise<{ 
     allFonts.push(...result.fonts);
   }
   
-  console.log(`[ZeoSeven] Total merged font-face rules: ${allFonts.length}`);
   return { fonts: allFonts };
 }
