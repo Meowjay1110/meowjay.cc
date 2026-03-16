@@ -2,6 +2,7 @@
 layout: ../layouts/AboutLayout.astro
 title: "关于"
 ---
+
 ## 你好！
 
 我是 Meowjay。一名普通的高中一年级学生。现居广东。

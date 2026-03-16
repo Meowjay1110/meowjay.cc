@@ -4,6 +4,7 @@ pubDatetime: 2026-01-09T00:00:00Z
 description: Meowjay 讲述他最近患直肠疾病的经历。
 tags: ["经历"]
 ---
+
 ## 起因
 
 最近几个月发现自己的肛门总是痛的厉害，于是去看医生。医生初步检查之后认为 “可能是有息肉” 于是开了肠镜的检查单。还发现有一点直肠脱垂。
@@ -30,10 +31,11 @@ tags: ["经历"]
 
 > 孤立性直肠溃疡综合征源于创伤导致的远端直肠黏膜局部缺血。
 > 病因包括：
->  - [直肠脱垂](https://www.msdmanuals.cn/professional/gastrointestinal-disorders/anorectal-disorders/rectal-prolapse-and-procidentia)
->  - 耻骨直肠肌矛盾性收缩
->  - 慢性[便秘](https://www.msdmanuals.cn/professional/gastrointestinal-disorders/symptoms-of-gastrointestinal-disorders/constipation)
->  - 试图手动排出坚硬大便
+>
+> - [直肠脱垂](https://www.msdmanuals.cn/professional/gastrointestinal-disorders/anorectal-disorders/rectal-prolapse-and-procidentia)
+> - 耻骨直肠肌矛盾性收缩
+> - 慢性[便秘](https://www.msdmanuals.cn/professional/gastrointestinal-disorders/symptoms-of-gastrointestinal-disorders/constipation)
+> - 试图手动排出坚硬大便
 >
 > 症状：患者排便费力、排便不尽感或盆腔胀满，有时由直肠排出血液和粘液。
 

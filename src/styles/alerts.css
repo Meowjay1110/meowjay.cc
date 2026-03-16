@@ -1,7 +1,6 @@
-
 .markdown-alert {
   @apply my-6 border-l-4 p-4;
-  
+
   & > *:first-child {
     @apply mt-0;
   }
@@ -10,8 +9,8 @@
   }
 
   .markdown-alert-title {
-    @apply mb-2 flex items-center gap-2 font-bold leading-none;
-    
+    @apply mb-2 flex items-center gap-2 leading-none font-bold;
+
     svg {
       @apply h-4 w-4 fill-current;
     }

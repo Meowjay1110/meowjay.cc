@@ -1,4 +1,4 @@
-import { defineConfig, envField } from "astro/config";
+import { defineConfig, envField, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
@@ -11,7 +11,7 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
-import { fontProvider } from "./src/utils/font-solution/fontProvider";
+import { getFontVariants } from "./src/utils/font-solution/utils";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +22,11 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }], remarkGithubAlert],
+    remarkPlugins: [
+      remarkToc,
+      [remarkCollapse, { test: "Table of contents" }],
+      remarkGithubAlert,
+    ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
@@ -63,8 +67,18 @@ export default defineConfig({
     {
       name: "LXGW Bright",
       cssVariable: "--font-lxgw-bright",
-      provider: fontProvider(),
+      provider: fontProviders.local(),
       fallbacks: ["serif"],
-    }
-  ]
+      options: {
+        variants: [
+          ...getFontVariants("Regular"),
+          ...getFontVariants("Italic"),
+          ...getFontVariants("Light"),
+          ...getFontVariants("LightItalic"),
+          ...getFontVariants("Medium"),
+          ...getFontVariants("MediumItalic"),
+        ] as any,
+      },
+    },
+  ],
 });
