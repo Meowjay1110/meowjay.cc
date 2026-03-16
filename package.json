@@ -10,7 +10,9 @@
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "cf:preview": "pnpm run build && npx wrangler dev",
+    "cf:deploy": "pnpm run build && npx wrangler deploy"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.17",
