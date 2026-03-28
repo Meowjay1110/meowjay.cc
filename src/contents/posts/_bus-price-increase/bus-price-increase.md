@@ -1,8 +1,9 @@
 ---
 title: 公交车涨价了
 pubDatetime: 2026-01-10T00:00:00Z
-description: "Meowjay 讲述他对公交车涨价的观察。"
+description: Meowjay 讲述他对公交车涨价的观察。
 tags: []
+draft: false
 ---
 
 作为一名普通路过的城市市民，如果说 2026 年对我影响最大的公共事件，那大概就是——我居住的城市的公交车涨价了。（截止目前）

@@ -6,16 +6,16 @@ tags:
   - 麦当劳
   - 杯盖
   - 批评
+draft: false
 ---
-
 作为一名忠实的麦门信徒，麦当劳一直是我最爱的快餐厅，也是我一个人出门吃饭的首选。在因为种种原因有长达 24 天没有吃麦当劳后，今天我终于再次走进了楼下的麦当劳。在下单了一堆吃的和一杯少冰可乐[^1]之后不久，我就拿到了属于我的那份餐。就当我坐下准备开动的时候，我发现了一个巨大的问题：不知道从什么时候起，麦当劳把他们的杯盖又更新了，变成了下面这种：
 
-![新杯盖](@/contents/images/mcdonalds-new-lid-sucks-img/new-lid.jpg)
+![新杯盖](../attachments/mcdonalds-new-lid-sucks-img/new-lid.jpg)
 _新款的杯盖。图片来自麦当劳中国官网[新闻稿](https://www.mcdonalds.com.cn/news/20251219-PLA-Package-UppubDatetime)_
 
 作为对比，下面是之前的杯盖：
 
-![老杯盖](@/contents/images/mcdonalds-new-lid-sucks-img/legacy-lid.jpg)
+![老杯盖](../attachments/mcdonalds-new-lid-sucks-img/legacy-lid.jpg)
 _老款的杯盖。图片来自[环球网](https://3w.huanqiu.com/a/c36dc8/3ytpqNK75b3)_
 
 发现问题了吗？原来的杯盖有一个默认封上，可以扣开的盖子，新款则取消了这个设计，直接变成了敞开口。想象一下在你拿到你的可乐之前，会多多少灰尘进到杯子里。同时这也意味着当你拿着它走动的时候，饮料会更容易洒出来。聪明的麦当劳当然想到了这个问题，所以他们为外卖的饮料又设计了一款可以密封的杯盖。但是如果你点的堂食临走时饮料还没有喝完，你要么问工作人员再要一个盖子，或者就只能祈祷自己的手够稳了。
