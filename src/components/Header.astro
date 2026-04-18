@@ -86,6 +86,50 @@ const isActive = (path: string) => {
             About
           </a>
         </li>
+        <li class="col-span-2 group relative">
+          <div
+            id="more-dropdown-btn"
+            class="cursor-pointer flex w-full items-center justify-center gap-1 px-4 py-3 font-medium hover:text-accent sm:w-auto sm:px-2 sm:py-1"
+          >
+            More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4 transition-transform group-hover:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+          <ul
+            id="more-dropdown-items"
+            class:list={[
+              "hidden group-hover:block sm:absolute sm:top-full sm:right-0 sm:z-50 sm:mt-0 sm:min-w-[120px] sm:bg-background sm:border sm:border-border sm:p-2 sm:shadow-lg sm:rounded",
+              "w-full text-center sm:text-left space-y-1"
+            ]}
+          >
+            <li>
+              <a href="/comments" class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1">
+                Comments
+              </a>
+            </li>
+            <li>
+              <a href="/now" class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1">
+                Now
+              </a>
+            </li>
+            <li>
+              <a href="/uses" class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1">
+                Uses
+              </a>
+            </li>
+          </ul>
+        </li>
+        
         {
           SITE.showArchives && (
             <li class="col-span-2">
@@ -122,17 +166,40 @@ const isActive = (path: string) => {
         </li>
         {
           SITE.lightAndDarkMode && (
-            <li class="col-span-1 flex items-center justify-center">
+            <li class="col-span-1 flex items-center justify-center group relative">
               <button
                 id="theme-btn"
                 class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent"
-                title="切换日间/夜间模式"
+                title="Select theme"
                 aria-label="auto"
                 aria-live="polite"
               >
                 <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
                 <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               </button>
+              <ul
+                id="theme-dropdown-items"
+                class:list={[
+                  "hidden group-hover:block sm:absolute sm:top-full sm:right-0 sm:z-50 sm:mt-0 sm:min-w-[100px] sm:bg-background sm:border sm:border-border sm:p-2 sm:shadow-lg sm:rounded",
+                  "w-full text-center sm:text-left space-y-1"
+                ]}
+              >
+                <li>
+                  <button class="theme-select-btn block w-full px-4 py-2 hover:text-accent sm:px-2 sm:py-1 text-center sm:text-left" data-theme-val="light">
+                    Light
+                  </button>
+                </li>
+                <li>
+                  <button class="theme-select-btn block w-full px-4 py-2 hover:text-accent sm:px-2 sm:py-1 text-center sm:text-left" data-theme-val="dark">
+                    Dark
+                  </button>
+                </li>
+                <li>
+                  <button class="theme-select-btn block w-full px-4 py-2 hover:text-accent sm:px-2 sm:py-1 text-center sm:text-left" data-theme-val="system">
+                    System
+                  </button>
+                </li>
+              </ul>
             </li>
           )
         }
@@ -154,12 +221,23 @@ const isActive = (path: string) => {
       const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
 
       menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
-      menuBtn.setAttribute("aria-label", openMenu ? "打开菜单" : "关闭菜单");
+      menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
 
       menuItems.classList.toggle("hidden");
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
     });
+
+    // Handle More dropdown click toggle on mobile
+    const moreBtn = document.querySelector("#more-dropdown-btn");
+    const moreItems = document.querySelector("#more-dropdown-items");
+    if (moreBtn && moreItems) {
+      moreBtn.addEventListener("click", () => {
+        if (window.innerWidth < 640) {
+          moreItems.classList.toggle("hidden");
+        }
+      });
+    }
   }
 
   toggleNav();

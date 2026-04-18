@@ -4,9 +4,7 @@
     "prefix": "frontmatter",
     "body": [
       "---",
-      "author: $1",
-      "pubDatetime: $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND.000$CURRENT_TIMEZONE_OFFSET",
-      "modDatetime: $3",
+      "pubDatetime: $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND$CURRENT_TIMEZONE_OFFSET",
       "title: $4",
       "featured: ${5|false,true|}",
       "draft: ${6|true,false|}",
@@ -19,7 +17,7 @@
   },
   "Blog Template": {
     "scope": "markdown",
-    "prefix": "template",
+    "prefix": "blog",
     "body": [
       "${1:frontmatter}",
       "",
@@ -30,5 +28,17 @@
       "## ${3: heading 1}",
     ],
     "description": "Adds the template for the AstroPaper Blog post. You will need to trigger the snippet modal on the 'frontmatter' line to insert the other snipper."
+  },
+  "Page Template": {
+    "scope": "markdown",
+    "prefix": "page",
+    "body": [
+      "---",
+      "layout: ../layouts/MDPageLayout.astro",
+      "title: $1",
+      "description: $2",
+      "---",
+    ],
+    "description": "Adds the template for the AstroPaper Page."
   }
 }

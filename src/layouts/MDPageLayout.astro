@@ -6,17 +6,20 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import Layout from "./Layout.astro";
 import { SITE } from "@/config";
 
-type Props = MarkdownLayoutProps<{ title: string }>;
+type Props = MarkdownLayoutProps<{ title: string; description?: string }>;
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+<Layout title={`${frontmatter.title} | ${SITE.title}`} description={`${frontmatter.description} | ${SITE.desc}`}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout">
     <section id="about" class="app-prose mb-28 max-w-app prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+      <div>
+        <h1 class="text-2xl font-semibold sm:text-3xl mb-0">{frontmatter.title}</h1>
+        <p class="mt-2 mb-6 italic">{frontmatter.description}</p>
+      </div>
       <slot />
     </section>
   </main>

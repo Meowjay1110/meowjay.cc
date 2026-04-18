@@ -140,18 +140,23 @@ const structuredData = {
     <!-- Minimal inline script to prevent FOUC - sets theme immediately -->
     <script is:inline>
       (function () {
-        const initialColorScheme = ""; // "light" | "dark"
-        const currentTheme = localStorage.getItem("theme");
+        const THEME = "theme";
+        const SYSTEM = "system";
+        const DARK = "dark";
+        const LIGHT = "light";
 
-        function getPreferTheme() {
-          if (currentTheme) return currentTheme;
-          if (initialColorScheme) return initialColorScheme;
-          return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
+        const currentTheme = localStorage.getItem(THEME) || SYSTEM;
+
+        function resolveTheme(pref) {
+          if (pref === SYSTEM) {
+            return window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? DARK
+              : LIGHT;
+          }
+          return pref;
         }
 
-        const themeValue = getPreferTheme();
+        const themeValue = resolveTheme(currentTheme);
 
         // Set theme immediately to prevent flash
         document.firstElementChild?.setAttribute("data-theme", themeValue);
