@@ -14,6 +14,7 @@ import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import Copyright from "@/components/Copyright.astro";
+import Comment from "@/components/Comment.astro";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -160,6 +161,10 @@ const nextPost =
         )
       }
     </div>
+
+    <hr class="my-6 border-dashed" />
+
+    <Comment />
   </main>
   <Footer />
 </Layout>
