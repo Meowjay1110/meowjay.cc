@@ -1,5 +1,5 @@
 ---
-title: ⌈只有我这样吗？⌋：不解开鞋带
+title: 「只有我这样吗？」：不解开鞋带
 pubDatetime: 2026-02-06T11:27:00Z
 description: Meowjay 讲述他（曾经）的一个奇怪习惯。
 tags:
