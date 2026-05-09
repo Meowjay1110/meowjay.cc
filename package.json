@@ -21,7 +21,7 @@
     "@tuyuritio/remark-github-alert": "^1.0.0",
     "artalk": "^2.9.1",
     "astro": "^6.3.1",
-    "dayjs": "^1.11.19",
+    "dayjs": "^1.11.20",
     "lodash.kebabcase": "^4.1.1",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
