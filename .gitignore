@@ -28,4 +28,5 @@ pnpm-debug.log*
 public/pagefind
 # Vault CMS / Obsidian
 .obsidian/
+src/contents/.obsidian/
 .ref/

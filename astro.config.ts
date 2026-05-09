@@ -13,6 +13,16 @@ import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 import { getFontVariants } from "./src/utils/font-solution/utils";
 
+type LocalFontVariant = {
+  src: [string, ...string[]];
+  weight?: string | number;
+  style?: "normal" | "italic" | "oblique";
+  display?: "auto" | "block" | "swap" | "fallback" | "optional";
+  unicodeRange?: [string, ...string[]];
+};
+
+type LocalFontVariants = [LocalFontVariant, ...LocalFontVariant[]];
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -91,7 +101,7 @@ export default defineConfig({
           ...getFontVariants("LightItalic"),
           ...getFontVariants("Medium"),
           ...getFontVariants("MediumItalic"),
-        ] as any,
+        ] as unknown as LocalFontVariants,
       },
     },
   ],
