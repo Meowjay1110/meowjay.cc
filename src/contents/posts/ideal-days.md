@@ -9,6 +9,7 @@ tags:
   - 日常
 draft: false
 ---
+
 > [!tip] BlogBlog 同乐会！
 > 这是我的「[BlogBlog 同乐会 - 2026 年 3 月](https://blogblog.club/party)」的投稿文章。本月主题是「[理想的日常](https://alexhsu.com/perfect-days)」，由 [Alex Hsu](https://alexhsu.com/) 主持。如果你有自己的博客，欢迎一起来参加！
 

@@ -12,7 +12,9 @@ let themePreference = getStoredTheme();
 
 function resolveTheme(pref: string): string {
   if (pref === SYSTEM) {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? DARK
+      : LIGHT;
   }
   return pref;
 }
@@ -22,7 +24,9 @@ function reflectPreference(): void {
   document.firstElementChild?.setAttribute("data-theme", resolvedTheme);
 
   // Update button label
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themePreference);
+  document
+    .querySelector("#theme-btn")
+    ?.setAttribute("aria-label", themePreference);
 
   // Update selection highlight
   document.querySelectorAll(".theme-select-btn").forEach(btn => {
@@ -64,8 +68,10 @@ function setupThemeFeatures(): void {
 
   // Listen for dropdown item clicks
   document.querySelectorAll(".theme-select-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      const val = (e.currentTarget as HTMLElement).getAttribute("data-theme-val");
+    btn.addEventListener("click", e => {
+      const val = (e.currentTarget as HTMLElement).getAttribute(
+        "data-theme-val"
+      );
       if (val) {
         setPreference(val);
       }
