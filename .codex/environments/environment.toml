@@ -4,3 +4,8 @@ name = "NewNewMeowjayCC"
 
 [setup]
 script = "pnpm install"
+
+[[actions]]
+name = "Dev Server"
+icon = "test"
+command = "pnpm run dev"
