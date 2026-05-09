@@ -6,6 +6,7 @@ import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { transform, walk } from "ultrahtml";
+import type { Node as HtmlNode } from "ultrahtml";
 import sanitize from "ultrahtml/transformers/sanitize";
 
 export async function GET(context: APIContext) {
@@ -51,7 +52,7 @@ export async function GET(context: APIContext) {
               node.attributes.class?.includes("markdown-alert-title")
             ) {
               node.children = node.children?.filter(
-                (child: any) => child.name !== "svg"
+                (child: HtmlNode) => !("name" in child) || child.name !== "svg"
               );
               delete node.attributes.class;
             }

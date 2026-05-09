@@ -3,6 +3,7 @@ layout: ../layouts/MDPageLayout.astro
 title: Now
 description: Last updated on Apr 18, 2026.
 ---
+
 **居住**：现居广东省某个据说被称为世界美食之都的小城。
 
 **写作**：看到 [Wiwi](https://wiwi.blog) 发起的 BlogBlog 同乐会后，决定捡起之前放弃很久的博客，现在已经连续参加了三期活动。此外还另外发了一些文章。
