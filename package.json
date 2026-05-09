@@ -17,7 +17,7 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@resvg/resvg-js": "^2.6.2",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.3.0",
     "@tuyuritio/remark-github-alert": "^1.0.0",
     "artalk": "^2.9.1",
     "astro": "^6.1.7",
