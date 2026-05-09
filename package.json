@@ -47,7 +47,7 @@
     "prettier-plugin-tailwindcss": "^0.8.0",
     "remark-footnotes-extra": "^0.3.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.51.0",
+    "typescript-eslint": "^8.59.2",
     "wrangler": "^4.90.0"
   }
 }
