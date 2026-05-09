@@ -7,4 +7,3 @@ updates:
       day: "saturday"
       time: "09:00"
       timezone: "Asia/Shanghai"
-    open-pull-requests-limit: 10
