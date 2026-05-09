@@ -28,7 +28,7 @@
     "satori": "^0.18.3",
     "sharp": "^0.34.5",
     "slugify": "^1.6.9",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.3.0",
     "ultrahtml": "^1.6.0"
   },
   "devDependencies": {
