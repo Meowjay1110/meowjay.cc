@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import Datetime from "./Datetime.astro";
+
+type Props = CollectionEntry<"jottings">;
+
+const entry = Astro.props;
+const { Content } = await render(entry);
+---
+
+<li class="my-6">
+  <h2 class="text-lg font-medium text-accent">{entry.data.title}</h2>
+  <Datetime pubDatetime={entry.data.pubDatetime} modDatetime={entry.data.modDatetime} />
+  <article
+    class="app-prose mt-4 prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
+  >
+    <Content />
+  </article>
+</li>
