@@ -30,3 +30,10 @@ public/pagefind
 .obsidian/
 src/contents/.obsidian/
 .ref/
+
+# Obsidian workspace files
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+
+# Claude Code local settings
+.claude/settings.local.json

@@ -25,4 +25,17 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+export const JOTTINGS_PATH = "src/contents/jottings";
+
+const jottings = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.md", base: `./${JOTTINGS_PATH}` }),
+  schema: z.object({
+    author: z.string().default(SITE.author),
+    pubDatetime: z.date(),
+    modDatetime: z.date().optional().nullable(),
+    title: z.string(),
+    draft: z.boolean().optional(),
+  }),
+});
+
+export const collections = { blog, jottings };

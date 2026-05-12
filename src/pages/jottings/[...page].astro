@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Main from "@/layouts/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import JottingEntry from "@/components/JottingEntry.astro";
+import Pagination from "@/components/Pagination.astro";
+import { SITE } from "@/config";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const jottings = await getCollection("jottings", ({ data }) => {
+    const isPublishTimePassed =
+      Date.now() >
+      new Date(data.pubDatetime).getTime() - SITE.scheduledPostMargin;
+    return import.meta.env.DEV || (!data.draft && isPublishTimePassed);
+  });
+  const sorted = jottings.sort(
+    (a, b) =>
+      Math.floor(
+        new Date(b.data.modDatetime ?? b.data.pubDatetime).getTime() / 1000
+      ) -
+      Math.floor(
+        new Date(a.data.modDatetime ?? a.data.pubDatetime).getTime() / 1000
+      )
+  );
+  return paginate(sorted, { pageSize: SITE.postPerPage });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<Layout title={`Jottings | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="Jottings" pageDesc="Scattered thoughts and notes.">
+    <ul>
+      {page.data.map(entry => <JottingEntry {...entry} />)}
+    </ul>
+  </Main>
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>

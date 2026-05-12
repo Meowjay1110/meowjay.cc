@@ -114,6 +114,17 @@ const isActive = (path: string) => {
           >
             <li>
               <a
+                href="/jottings"
+                class:list={[
+                  "block px-4 py-2 hover:text-accent sm:px-2 sm:py-1",
+                  { "active-nav": isActive("/jottings") },
+                ]}
+              >
+                Jottings
+              </a>
+            </li>
+            <li>
+              <a
                 href="/comments"
                 class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1"
               >
