@@ -69,27 +69,6 @@ views:
     draftStatusProperty: note.draft
     draftStatusReverse: false
   - type: cms
-    name: Attachments
-    filters:
-      and:
-        - file.folder.startsWith("attachments")
-    sort:
-      - property: file.ctime
-        direction: DESC
-    imageFormat: cover
-    showDate: true
-    customizeNewButton: true
-    newNoteLocation: attachments
-    fallbackToEmbeds: if-empty
-    propertyDisplay1: file.fullname
-    showTextPreview: true
-    propertyLabels: above
-    titleProperty: file.fullname
-    titlePropertyNested: file.fullname
-    dateProperty: file.ctime
-    showTags: false
-    showDraftStatus: false
-  - type: cms
     name: Jottings
     filters:
       and:
@@ -105,8 +84,9 @@ views:
     propertyDisplay1: file.fullname
     showTextPreview: true
     propertyLabels: above
-    titleProperty: file.fullname
+    titleProperty: note.title
     titlePropertyNested: file.fullname
     dateProperty: file.ctime
     showTags: false
-    showDraftStatus: false
+    showDraftStatus: true
+    draftStatusProperty: note.draft
