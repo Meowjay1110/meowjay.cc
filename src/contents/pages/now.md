@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/MDPageLayout.astro
 title: Now
 description: Last updated on Apr 18, 2026.
 ---

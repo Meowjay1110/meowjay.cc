@@ -38,4 +38,14 @@ const jottings = defineCollection({
   }),
 });
 
-export const collections = { blog, jottings };
+export const PAGES_PATH = "src/contents/pages";
+
+const pages = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.md", base: `./${PAGES_PATH}` }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { blog, jottings, pages };

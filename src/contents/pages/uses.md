@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/MDPageLayout.astro
 title: Uses
 description: Things Meowjay loves to use.
 ---

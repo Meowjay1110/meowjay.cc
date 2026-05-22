@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/MDPageLayout.astro
 title: "About"
 description: "Something you may want to know about Meowjay."
 ---
