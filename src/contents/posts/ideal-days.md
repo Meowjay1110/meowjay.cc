@@ -46,4 +46,4 @@ _2026 年 02 月 22 日的小林日历。_
 
 写到这里，我也没想明白答案是什么。或许"理想的日常"本来就没有标准答案，只是一个值得一直追问下去的问题。最后，来听首歌吧。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8oBV3jPTW4s?si=-somUP5PZBSCsgr_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/8oBV3jPTW4s?si=-somUP5PZBSCsgr_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
