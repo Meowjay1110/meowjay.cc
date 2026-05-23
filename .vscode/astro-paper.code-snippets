@@ -34,7 +34,6 @@
     "prefix": "page",
     "body": [
       "---",
-      "layout: ../layouts/MDPageLayout.astro",
       "title: $1",
       "description: $2",
       "---",
