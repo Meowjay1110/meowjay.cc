@@ -50,7 +50,7 @@ views:
       and:
         - file.folder.startsWith("posts")
     sort:
-      - property: file.ctime
+      - property: pubDatetime
         direction: DESC
     imageFormat: cover
     showDate: true
@@ -61,7 +61,7 @@ views:
     showTextPreview: true
     propertyLabels: above
     titleProperty: note.title
-    dateProperty: file.ctime
+    dateProperty: note.pubDatetime
     descriptionProperty: note.description
     showTags: true
     tagsProperty: note.tags
@@ -86,7 +86,28 @@ views:
     propertyLabels: above
     titleProperty: note.title
     titlePropertyNested: file.fullname
-    dateProperty: file.ctime
+    dateProperty: note.pubDatetime
     showTags: false
     showDraftStatus: true
     draftStatusProperty: note.draft
+  - type: cms
+    name: Pages
+    filters:
+      and:
+        - file.folder.startsWith("pages")
+    sort:
+      - property: file.ctime
+        direction: DESC
+    imageFormat: cover
+    showDate: true
+    customizeNewButton: true
+    newNoteLocation: pages
+    fallbackToEmbeds: if-empty
+    propertyDisplay1: file.fullname
+    showTextPreview: true
+    propertyLabels: above
+    titleProperty: note.title
+    dateProperty: file.ctime
+    descriptionProperty: note.description
+    showTags: false
+    showDraftStatus: false
