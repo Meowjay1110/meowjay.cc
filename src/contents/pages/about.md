@@ -31,4 +31,4 @@ _没头脑和不高兴。_
 
 ## 联系我
 
-如果有联系我的需要，欢迎在 [Comments](/comments) 留言，或发 Mail 到 contact@meowjay.cc。
+如果有联系我的需要，欢迎发 Mail 到 contact@meowjay.cc。
