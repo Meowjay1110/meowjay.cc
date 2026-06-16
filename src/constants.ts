@@ -1,7 +1,7 @@
 import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
-import IconBilibili from "@/assets/icons/IconBilibili.svg";
+import IconMastodon from "@/assets/icons/IconMastodon.svg";
 
 interface Social {
   name: string;
@@ -23,10 +23,10 @@ export const SOCIALS: Social[] = [
     icon: IconGitHub,
   },
   {
-    name: "Bilibili",
-    href: "https://space.bilibili.com/1063974427",
-    linkTitle: `Bilibili 上的 Meowjay`,
-    icon: IconBilibili,
+    name: "Mastodon",
+    href: "https://mastodon.social/@meowjay",
+    linkTitle: `Mastodon 上的 Meowjay`,
+    icon: IconMastodon,
   },
   {
     name: "Mail",

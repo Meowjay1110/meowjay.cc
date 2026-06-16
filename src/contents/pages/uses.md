@@ -3,7 +3,7 @@ title: Uses
 description: Things Meowjay loves to use.
 ---
 
-_最后更新于：2026/04/18_
+_最后更新于 2026 年 6 月 16 日。_
 
 ## 🖥️ 电脑相关
 
