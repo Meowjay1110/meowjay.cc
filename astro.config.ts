@@ -12,6 +12,7 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 import { getFontVariants } from "./src/utils/font-solution/utils";
+import { unified } from "@astrojs/markdown-remark";
 
 type LocalFontVariant = {
   src: [string, ...string[]];
@@ -32,11 +33,13 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [remarkCollapse, { test: "Table of contents" }],
-      remarkGithubAlert,
-    ],
+    processor: unified({
+      remarkPlugins: [
+        remarkToc,
+        [remarkCollapse, { test: "Table of contents" }],
+        remarkGithubAlert,
+      ],
+    }),
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
