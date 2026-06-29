@@ -1,2 +1,5 @@
+/*
+  Cache-Control: public, max-age=60, stale-while-revalidate=3600
+
 /_astro/*
   Cache-Control: public, max-age=31556952, immutable
