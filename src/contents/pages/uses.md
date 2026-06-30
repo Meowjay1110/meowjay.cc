@@ -3,7 +3,7 @@ title: Uses
 description: Things Meowjay loves to use.
 ---
 
-_最后更新于 2026 年 6 月 16 日。_
+_最后更新于 2026 年 6 月 30 日。_
 
 ## 🖥️ 电脑相关
 
@@ -49,10 +49,6 @@ _最后更新于 2026 年 6 月 16 日。_
 
 让原本不支持深色模式的网站支持深色模式。
 
-- [cpdown](https://chromewebstore.google.com/detail/cpdown/knnaflplggjdedobhbidojmmnocfbopf)
-
-把网页主要内容转换为 Markdown 格式，但是我用下来效果一般，在有些网站比如说我订阅的 [财新](https://www.caixin.com/) 会把一些其他的内容也带上。正在寻找更好的解决方案。
-
 - [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar)
 
 探测网页的 RSS，与 RSSHub 连接，支持一键在 RSS 阅读器里打开。
@@ -65,6 +61,6 @@ _最后更新于 2026 年 6 月 16 日。_
 
 - [Todoist](https://www.todoist.com/)
 
-优点和缺点都很明显。比较喜欢可以通过自然语言来获取任务的信息。最近用的少了。
+优点和缺点都很明显。比较喜欢可以通过自然语言来获取任务的信息。
 
 _未完待续_
