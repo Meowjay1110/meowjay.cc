@@ -24,7 +24,7 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "Mastodon",
-    href: "https://masto.meowjay.cc/@meowjay",
+    href: "https://c7.io/@meowjay",
     linkTitle: `Mastodon 上的 Meowjay`,
     icon: IconMastodon,
   },

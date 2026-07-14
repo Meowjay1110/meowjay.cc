@@ -45,6 +45,6 @@ Encore 环节是最出乎我意料的。乐队的 5 名成员全部回到了舞�
 
 ## Off Topic
 
-![「懐かしい月は新しい月 "蜃気楼"」的 Blu-ray](../attachments/shinkiro-bluray.jpg)
+![「懐かしい月は新しい月 "蜃気楼"」的 Blu-ray](../../attachments/shinkiro-bluray.jpg)
 
 _~~你怎么知道我有这场演出的 Blu-ray~~_
