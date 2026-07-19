@@ -7,7 +7,7 @@ tags:
   - 思考
   - Mastodon
   - 社交媒体
-draft: true
+draft: false
 ---
 
 将近半年没有在社交媒体上发东西之后，我意识到我还是想要一个可以比较简单的发布碎碎念的地方。于是我开始用 Mastodon。
