@@ -2,3 +2,5 @@ allowBuilds:
   esbuild: false
   sharp: false
   workerd: false
+minimumReleaseAgeExclude:
+  - astro@7.1.2
