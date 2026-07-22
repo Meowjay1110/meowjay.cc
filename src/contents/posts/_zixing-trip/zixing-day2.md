@@ -13,4 +13,4 @@ draft: true
 ---
 
 > [!TIP] 系列作品！
-> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](zixing-trip.md) | [上一篇](/posts/zixing-day1) | [下一篇](/posts/zixing-day3)
+> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](/posts/zixing-trip) | [上一篇](/posts/zixing-day1) | [下一篇](/posts/zixing-day3)
