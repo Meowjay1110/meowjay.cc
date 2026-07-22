@@ -1,7 +1,7 @@
 ---
-title: 和不高兴一起出游：Day 1
+title: 和不高兴一起出游（郴州资兴）：Day 1
 pubDatetime: 2026-07-21T20:39:26+08:00
-description: 只是游记。
+description: 和超绝超可爱小鲨鱼一起出门玩！
 tags:
   - 不高兴
   - 郴州
@@ -12,11 +12,14 @@ tags:
 draft: false
 ---
 
+> [!TIP] 系列作品！
+> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](zixing-trip.md)  | [下一篇](/posts/zixing-day2)
+
 今天带着不高兴[^1]一起出门旅游，去湖南郴州。我们有亲戚住在那里。
 
 中午 12 点，出发！
 
-![day1-image1](../attachments/zixing-day1/day1-image1.jpg)
+![day1-image1](../../attachments/zixing-day1/day1-image1.jpg)
 
 _不高兴趴在我的背包上。摄于广州南站候车室。_
 
@@ -24,13 +27,13 @@ _不高兴趴在我的背包上。摄于广州南站候车室。_
 
 到啦！
 
-![day1-image2](../attachments/zixing-day1/day1-image2.jpg)
+![day1-image2](../../attachments/zixing-day1/day1-image2.jpg)
 
 _不高兴趴在我的电脑上，~~试图阻止我写文章~~。_
 
 吃过晚饭我们去江边走了走。
 
-![day1-image3](../attachments/zixing-day1/day1-image3.jpg)
+![day1-image3](../../attachments/zixing-day1/day1-image3.jpg)
 
 _江边的风景。_
 
