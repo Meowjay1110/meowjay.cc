@@ -12,8 +12,10 @@ tags:
 draft: false
 ---
 
-**[Day 1](/posts/zixing-day1)**：出发/初到
+**[Day 1](/posts/zixing-day1)**：初到郴州
 
 **[Day 2](/posts/zixing-day2)**：高椅岭
+
+**[Day 3](/posts/zixing-day3)**：东江湖
 
 
