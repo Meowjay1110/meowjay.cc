@@ -4,6 +4,7 @@ pubDatetime: 2026-01-23T03:51:00Z
 description: 人为的规定背后到底是什么？
 tags: []
 draft: false
+featured: true
 ---
 
 > [!warning] 警告
