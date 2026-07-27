@@ -19,7 +19,3 @@ draft: false
 **[Day 3](/posts/zixing-day3)**：东江湖
 
 **[Day 4-5](/posts/zixing-day4-5)**：返程
-
-**[End](/posts/zixing-end.md)**：总结
-
-
