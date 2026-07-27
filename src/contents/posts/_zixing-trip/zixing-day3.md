@@ -13,7 +13,7 @@ draft: false
 ---
 
 > [!TIP] 系列作品！
-> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](/posts/zixing-trip) | [上一篇](/posts/zixing-day2) | [下一篇](/posts/zixing-day4)
+> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](/posts/zixing-trip) | [上一篇](/posts/zixing-day2) | [下一篇](/posts/zixing-day4-5)
 
 今天一早起来吃过早饭就前往东江湖景区。到景区后坐上接驳车，沿着小东江旁的山路蜿蜒前行。
 
