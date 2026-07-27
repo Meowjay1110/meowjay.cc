@@ -1,5 +1,5 @@
 ---
-title: 和不高兴一起出游（郴州资兴）：Day 4-5
+title: 和不高兴一起出游（郴州资兴）：End
 pubDatetime: 2026-07-27T18:56:00+08:00
 description: 和超绝超可爱小鲨鱼一起出门玩！
 tags:
