@@ -6,7 +6,7 @@ export const SITE = {
   title: "Meowjay的小窝",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 4,
+  postPerIndex: 2,
   postPerPage: 8,
   scheduledPostMargin: 30 * 60 * 1000, // 30 minutes
   showArchives: true,

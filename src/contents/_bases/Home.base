@@ -68,6 +68,7 @@ views:
     showDraftStatus: true
     draftStatusProperty: note.draft
     draftStatusReverse: false
+    propertyDisplay2: note.featured
   - type: cms
     name: Jottings
     filters:
