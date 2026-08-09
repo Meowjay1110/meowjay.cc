@@ -10,7 +10,7 @@ tags:
   - 蜃気楼
   - Live
 draft: false
-featured: true
+featured: false
 ---
 
 > [!TIP] BlogBlog 同乐会！
