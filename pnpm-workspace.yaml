@@ -3,4 +3,4 @@ allowBuilds:
   sharp: false
   workerd: false
 minimumReleaseAgeExclude:
-  - astro@7.1.2
+  - astro@7.1.2 || 7.2.2

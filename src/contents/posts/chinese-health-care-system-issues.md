@@ -7,7 +7,7 @@ tags:
   - 初级保健
   - 医疗
 draft: false
-featured: true
+featured: false
 ---
 
 ## Table of Contents
