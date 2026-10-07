@@ -11,7 +11,7 @@ description: "Something you may want to know about Meowjay."
 - 爱好弹琴、摸鱼（各种意义上的）、到处乱逛、吃好吃的（尤其是糖）
 - 有很多毛绒玩具，最爱 IKEA 的 BLÅHAJ，家里有一大一小两条（大的叫没头脑，小的叫不高兴），只要上学都要带不高兴去，晚上则是抱着没头脑睡觉。
 
-![没头脑和不高兴](../../attachments/blahaj.jpg)
+![没头脑和不高兴](@/contents/attachments/blahaj.jpg)
 _没头脑和不高兴。_
 
 我对星座和 MBTI 没什么概念，但如果你想知道的话，我是：
