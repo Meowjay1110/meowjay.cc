@@ -3,7 +3,7 @@ title: Uses
 description: Things Meowjay loves to use.
 ---
 
-_最后更新于 2026 年 6 月 30 日。_
+_最后更新于 2026 年 10 月 7 日。_
 
 ## 🖥️ 电脑相关
 
@@ -23,11 +23,11 @@ _最后更新于 2026 年 6 月 30 日。_
 
 - Windows 11
 
-主力机用的系统。我知道你要说什么——但是我确实懒得换了。而且现在硬盘里的数据也没有地方可以搬过去，我也没有多的硬盘。先这么用着吧。
+主力机用的系统之一。我知道你要说什么——算了我不管了反正先这么用着吧。
 
-- Fedora
+- [Fedora Plasma KDE](https://fedoraproject.org/kde/)
 
-装在笔记本上，让老笔记本焕发第二春！
+现在主力机的另一个系统，以及笔记本也用的这个。
 
 ### 🌏 浏览器
 
@@ -53,9 +53,9 @@ _最后更新于 2026 年 6 月 30 日。_
 
 探测网页的 RSS，与 RSSHub 连接，支持一键在 RSS 阅读器里打开。
 
-- [沉浸式翻译](https://immersivetranslate.com/)
+- [Kagi Translate](https://translate.kagi.com/)
 
-支持双语对照翻译。正在寻找替代品。
+翻译。
 
 ### 🗓️ Todo 清单
 
