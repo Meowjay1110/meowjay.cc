@@ -54,19 +54,6 @@ export default defineConfig({
     },
   },
   vite: {
-    server: {
-      watch: {
-        ignored: [
-          "**/.obsidian/**",
-          "**/_bases/**",
-          "**/bases/**",
-          "**/_home/**",
-          "**/home/**",
-          "**/_base/**",
-          "**/base/**",
-        ],
-      },
-    },
     assetsInclude: ["**/*.base", "**/.obsidian/**", "**/_bases/**"],
     // eslint-disable-next-line
     // @ts-ignore

@@ -7,7 +7,7 @@ tags:
   - 评论区
   - 思考
 draft: false
-featured: true
+featured: false
 ---
 
 > [!TIP]
