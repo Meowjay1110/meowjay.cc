@@ -3,7 +3,7 @@ title: Uses
 description: Things Meowjay loves to use.
 ---
 
-_最后更新于 2026 年 10 月 7 日。_
+_最后更新于 2026 年 11 月 8 日。_
 
 ## 🖥️ 电脑相关
 
@@ -21,13 +21,9 @@ _最后更新于 2026 年 10 月 7 日。_
 
 ### 💾 操作系统
 
-- Windows 11
+- [Fedora KDE Plasma Desktop](https://fedoraproject.org/kde/)
 
-主力机用的系统之一。我知道你要说什么——算了我不管了反正先这么用着吧。
-
-- [Fedora Plasma KDE](https://fedoraproject.org/kde/)
-
-现在主力机的另一个系统，以及笔记本也用的这个。
+现在主力机、笔记本都用的这个。
 
 ### 🌏 浏览器
 
@@ -45,10 +41,6 @@ _最后更新于 2026 年 10 月 7 日。_
 
 不需要解释，自定度高，资源占用还相对少。
 
-- [Dark Reader](https://darkreader.org/)
-
-让原本不支持深色模式的网站支持深色模式。
-
 - [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar)
 
 探测网页的 RSS，与 RSSHub 连接，支持一键在 RSS 阅读器里打开。
@@ -57,9 +49,13 @@ _最后更新于 2026 年 10 月 7 日。_
 
 翻译。
 
+### 📧 邮件
+
+- [Fastmail](https://join.fastmail.com/8504c1a4)（订阅制，60 USD / 年，点击链接第一年订阅有 9 折）
+
 ### 🗓️ Todo 清单
 
-- [Todoist](https://www.todoist.com/)
+- [Todoist Pro](https://www.todoist.com/)（订阅制，8064 JPY / 年）
 
 优点和缺点都很明显。比较喜欢可以通过自然语言来获取任务的信息。
 
