@@ -215,8 +215,8 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1
       ultrahtml:
-        specifier: ^1.6.0
-        version: 1.6.0
+        specifier: ^1.7.0
+        version: 1.7.0
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.12
@@ -3197,9 +3197,6 @@ packages:
 
   ufo@1.6.4:
     resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==}
-
-  ultrahtml@1.6.0:
-    resolution: {integrity: sha512-R9fBn90VTJrqqLDwyMph+HGne8eqY1iPfYhPzZrvKpIfwkWZbcYlfpsb8B9dTvBfpy1/hqAD7Wi8EKfP9e8zdw==}
 
   ultrahtml@1.7.0:
     resolution: {integrity: sha512-2xRd0VHoAQE4M+vF/DvFFB7pUV0ZxTW1TLi7lHQWnF/Sb5TPeEUV/l+hxcNnGO00ZXGnR0voCMmYRKQf+rvJ2g==}
@@ -6850,8 +6847,6 @@ snapshots:
   typescript@5.9.3: {}
 
   ufo@1.6.4: {}
-
-  ultrahtml@1.6.0: {}
 
   ultrahtml@1.7.0: {}
 
