@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.3.1",
     "@tuyuritio/remark-github-alert": "^1.0.0",
     "astro": "7.4.13",
-    "dayjs": "^1.11.21",
+    "dayjs": "^1.11.23",
     "lodash.kebabcase": "^4.1.1",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
