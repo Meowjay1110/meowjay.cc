@@ -4,5 +4,18 @@
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
-  }
+  },
+  "previews": {},
+  "routes": [
+    {
+      "pattern": "www.meowjay.cc",
+      "custom_domain": true
+    },
+    {
+      "pattern": "meowjay.cc",
+      "custom_domain": true,
+      "previews_enabled": true
+    }
+  ],
+  "workers_dev": false,
 }
