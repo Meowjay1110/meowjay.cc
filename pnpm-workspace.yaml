@@ -1,3 +1,6 @@
+overrides:
+  '@astrojs/astro2tsx': 0.1.5
+
 allowBuilds:
   esbuild: false
   sharp: false
@@ -7,3 +10,4 @@ minimumReleaseAgeExclude:
   - '@astrojs/internal-helpers@0.13.1'
   - '@astrojs/markdown-remark@7.3.6'
   - '@astrojs/markdown-satteri@0.4.7'
+  - '@astrojs/astro2tsx@0.1.5'
