@@ -7,7 +7,7 @@ draft: false
 根据 [PCL 仓库](https://github.com/Meloong-Git/PCL/releases/tag/2.99.0.0)，2026 年 10 月 20 日下午发布的版本 2.99.0.0 中，PCL 永久关闭了下载 Minecraft 的功能。原文如下：
 
 > 为遵守相关法律法规，PCL 不再提供 MC 下载功能，非常抱歉 qwq……
-> 
+>
 > 注：与网易微软麻将无关，中国式家长很神奇吧
 
 在接下来的几天内，HMCL、PCL CE 也跟进，暂停为中国大陆地区用户提供下载 Minecraft 的服务。

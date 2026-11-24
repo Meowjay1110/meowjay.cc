@@ -13,7 +13,7 @@ draft: false
 ---
 
 > [!TIP] 系列作品！
-> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](/posts/zixing-trip)  | [下一篇](/posts/zixing-day2)
+> 这是“和不高兴一起出游（郴州资兴）”系列作品的一部分。[目录](/posts/zixing-trip) | [下一篇](/posts/zixing-day2)
 
 今天带着不高兴[^1]一起出门旅游，去湖南郴州。我们有亲戚住在那里。
 
