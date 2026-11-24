@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import remarkGithubAlert from "@tuyuritio/remark-github-alert";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -10,6 +11,18 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
+import { getFontVariants } from "./src/utils/font-solution/utils";
+import { unified } from "@astrojs/markdown-remark";
+
+type LocalFontVariant = {
+  src: [string, ...string[]];
+  weight?: string | number;
+  style?: "normal" | "italic" | "oblique";
+  display?: "auto" | "block" | "swap" | "fallback" | "optional";
+  unicodeRange?: [string, ...string[]];
+};
+
+type LocalFontVariants = [LocalFontVariant, ...LocalFontVariant[]];
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +33,13 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    processor: unified({
+      remarkPlugins: [
+        remarkToc,
+        [remarkCollapse, { test: "Table of contents" }],
+        remarkGithubAlert,
+      ],
+    }),
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
@@ -35,6 +54,7 @@ export default defineConfig({
     },
   },
   vite: {
+    assetsInclude: ["**/*.base", "**/.obsidian/**", "**/_bases/**"],
     // eslint-disable-next-line
     // @ts-ignore
     // This will be fixed in Astro 6 with Vite 7 support
@@ -57,17 +77,22 @@ export default defineConfig({
       }),
     },
   },
-  experimental: {
-    preserveScriptOrder: true,
-    fonts: [
-      {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
+  fonts: [
+    {
+      name: "LXGW Bright",
+      cssVariable: "--font-lxgw-bright",
+      provider: fontProviders.local(),
+      fallbacks: ["serif"],
+      options: {
+        variants: [
+          ...getFontVariants("Regular"),
+          ...getFontVariants("Italic"),
+          ...getFontVariants("Light"),
+          ...getFontVariants("LightItalic"),
+          ...getFontVariants("Medium"),
+          ...getFontVariants("MediumItalic"),
+        ] as unknown as LocalFontVariants,
       },
-    ],
-  },
+    },
+  ],
 });

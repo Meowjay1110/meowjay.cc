@@ -1,0 +1,114 @@
+defaultView: Posts
+filters:
+  and:
+    - file.ext == "md"
+formulas:
+  Slug: |-
+    if(file.folder == "posts", "/posts/" + file.name.replace(".md", ""), 
+      if(file.folder == "pages", "/" + file.name.replace(".md", ""), 
+        if(file.folder == "special", if(file.name.replace(".md", "") == "home", "/", "/" + file.name.replace(".md", "")), 
+          if(file.folder == "projects", "/projects/" + file.name.replace(".md", ""), 
+            if(file.folder == "docs", "/docs/" + file.name.replace(".md", ""), 
+              "/" + file.folder)))))
+  Content Folder: |-
+    if(file.name == "index",
+      if(file.folder != "",
+        if(file.folder.replace("/" + file.folder.replace(/.*\//, ""), "") != "",
+          file.folder.replace("/" + file.folder.replace(/.*\//, ""), ""),
+          file.folder
+        ),
+        "root"
+      ),
+      if(file.folder != "",
+        file.folder,
+        "root"
+      )
+    )
+properties:
+  file.fullname:
+    displayName: Full File Name
+  file.name:
+    displayName: File Name
+  formula.Slug:
+    displayName: Path
+  note.date:
+    displayName: Date
+  note.description:
+    displayName: Description
+  note.draft:
+    displayName: Draft
+  note.pubDate:
+    displayName: Date
+  note.tags:
+    displayName: Tags
+  note.title:
+    displayName: Title
+views:
+  - type: cms
+    name: Posts
+    filters:
+      and:
+        - file.folder.startsWith("posts")
+    sort:
+      - property: pubDatetime
+        direction: DESC
+    imageFormat: cover
+    showDate: true
+    customizeNewButton: true
+    newNoteLocation: posts
+    fallbackToEmbeds: if-empty
+    propertyDisplay1: file.fullname
+    showTextPreview: true
+    propertyLabels: above
+    titleProperty: note.title
+    dateProperty: note.pubDatetime
+    descriptionProperty: note.description
+    showTags: true
+    tagsProperty: note.tags
+    showDraftStatus: true
+    draftStatusProperty: note.draft
+    draftStatusReverse: false
+    propertyDisplay2: note.featured
+  - type: cms
+    name: Jottings
+    filters:
+      and:
+        - file.folder.startsWith("jottings")
+    sort:
+      - property: file.ctime
+        direction: DESC
+    imageFormat: cover
+    showDate: true
+    customizeNewButton: true
+    newNoteLocation: jottings
+    fallbackToEmbeds: if-empty
+    propertyDisplay1: file.fullname
+    showTextPreview: true
+    propertyLabels: above
+    titleProperty: note.title
+    titlePropertyNested: file.fullname
+    dateProperty: note.pubDatetime
+    showTags: false
+    showDraftStatus: true
+    draftStatusProperty: note.draft
+  - type: cms
+    name: Pages
+    filters:
+      and:
+        - file.folder.startsWith("pages")
+    sort:
+      - property: file.ctime
+        direction: DESC
+    imageFormat: cover
+    showDate: true
+    customizeNewButton: true
+    newNoteLocation: pages
+    fallbackToEmbeds: if-empty
+    propertyDisplay1: file.fullname
+    showTextPreview: true
+    propertyLabels: above
+    titleProperty: note.title
+    dateProperty: file.ctime
+    descriptionProperty: note.description
+    showTags: false
+    showDraftStatus: false

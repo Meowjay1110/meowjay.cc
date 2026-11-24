@@ -1,30 +1,39 @@
-## Description
+## 简介
 
-<!-- A clear and concise description of what the pull request does. Include any relevant motivation and background. -->
+<!-- 简单说明这个 PR 做了什么，以及为什么要这么做。 -->
 
-## Types of changes
+## 更改类型
 
-<!-- What types of changes does your code introduce to AstroPaper? Put an `x` in the boxes that apply -->
+<!-- 勾选适用的项目，在方框里填 x -->
 
-- [ ] Bug Fix (non-breaking change which fixes an issue)
-- [ ] New Feature (non-breaking change which adds functionality)
-- [ ] Documentation Update (if none of the other choices apply)
-- [ ] Others (any other types not listed above)
+- [ ] 新文章（`src/contents/posts/`）
+- [ ] 新 Jottings（`src/contents/jottings/`）
+- [ ] 页面更新（About / Now / Uses 等，`src/contents/pages/`）
+- [ ] 修改已有文章 / 页面（错字、措辞、补充内容、更新日期等）
+- [ ] 主题或样式调整
+- [ ] 新功能 / 插件
+- [ ] Bug 修复
+- [ ] 依赖或配置更新（`package.json`、`astro.config`、部署相关等）
+- [ ] 其他
 
-## Checklist
+## 检查清单
 
-<!-- Please follow this checklist and put an x in each of the boxes, like this: [x]. You can also fill these out after creating the PR. This is simply a reminder of what we are going to look for before merging your code. -->
+### 构建与预览
 
-- [ ] I have read the [Contributing Guide](https://github.com/satnaing/astro-paper/blob/main/.github/CONTRIBUTING.md)
-- [ ] I have added the necessary documentation (if appropriate)
-- [ ] Breaking Change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] CI 通过，没有报错或新增的警告
+- [ ] 本地预览检查过相关页面（桌面端与移动端）
+- [ ] 已确认 Cloudflare 预览部署效果正常
 
-## Further comments
+### 其他
 
-<!-- If this is a relatively large or complex change, kick off the discussion by explaining why you chose the solution you did and what alternatives you considered, etc... -->
+- [ ] 这是破坏性改动（可能影响已有文章链接、RSS、站点地图等）
 
-## Related Issue
+## 补充说明
 
-<!-- If this PR is related to an existing issue, link to it here. -->
+<!-- 如果改动比较大或比较复杂，说明一下为什么这么做、考虑过哪些替代方案。 -->
 
-Closes: #<!-- Issue number, if applicable -->
+## 相关 Issue
+
+<!-- 如果和某个 Issue 有关，在这里链接。 -->
+
+Closes: #<!-- Issue 编号（如有） -->

@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import MDPageLayout from "@/layouts/MDPageLayout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map(page => ({
+    params: { slug: page.id },
+    props: { page },
+  }));
+}
+
+interface Props {
+  page: CollectionEntry<"pages">;
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<MDPageLayout frontmatter={page.data}>
+  <Content />
+</MDPageLayout>

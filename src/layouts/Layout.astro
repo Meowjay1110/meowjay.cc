@@ -57,15 +57,12 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Load Font -->
-    <Font
-      cssVariable="--font-google-sans-code"
-      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
-    />
+    <Font cssVariable="--font-lxgw-bright" />
 
     <!-- General Meta Tags -->
     <title>{title}</title>
@@ -73,6 +70,7 @@ const structuredData = {
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="me" href="https://c7.io/@meowjay" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
@@ -140,18 +138,23 @@ const structuredData = {
     <!-- Minimal inline script to prevent FOUC - sets theme immediately -->
     <script is:inline>
       (function () {
-        const initialColorScheme = ""; // "light" | "dark"
-        const currentTheme = localStorage.getItem("theme");
+        const THEME = "theme";
+        const SYSTEM = "system";
+        const DARK = "dark";
+        const LIGHT = "light";
 
-        function getPreferTheme() {
-          if (currentTheme) return currentTheme;
-          if (initialColorScheme) return initialColorScheme;
-          return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
+        const currentTheme = localStorage.getItem(THEME) || SYSTEM;
+
+        function resolveTheme(pref) {
+          if (pref === SYSTEM) {
+            return window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? DARK
+              : LIGHT;
+          }
+          return pref;
         }
 
-        const themeValue = getPreferTheme();
+        const themeValue = resolveTheme(currentTheme);
 
         // Set theme immediately to prevent flash
         document.firstElementChild?.setAttribute("data-theme", themeValue);

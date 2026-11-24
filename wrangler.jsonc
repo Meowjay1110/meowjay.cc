@@ -1,0 +1,25 @@
+{
+  "name": "new-new-meowjay-cc",
+  "compatibility_date": "2026-11-16",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  "previews": {
+    "vars": {
+      "ENVIRONMENT": "preview"
+    }
+  },
+  "routes": [
+    {
+      "pattern": "www.meowjay.cc",
+      "custom_domain": true
+    },
+    {
+      "pattern": "meowjay.cc",
+      "custom_domain": true,
+      "previews_enabled": true
+    }
+  ],
+  "workers_dev": false
+}

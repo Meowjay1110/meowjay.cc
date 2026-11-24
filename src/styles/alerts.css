@@ -1,0 +1,58 @@
+.markdown-alert {
+  @apply my-6 border-l-4 p-4;
+
+  & > *:first-child {
+    @apply mt-0;
+  }
+  & > *:last-child {
+    @apply mb-0;
+  }
+
+  .markdown-alert-title {
+    @apply mb-2 flex items-center gap-2 leading-none font-bold;
+
+    svg {
+      @apply h-4 w-4 fill-current;
+    }
+  }
+
+  /* NOTE */
+  &.markdown-alert-note {
+    @apply border-blue-500/50 bg-blue-500/5;
+    .markdown-alert-title {
+      @apply text-blue-600 dark:text-blue-400;
+    }
+  }
+
+  /* TIP */
+  &.markdown-alert-tip {
+    @apply border-emerald-500/50 bg-emerald-500/5;
+    .markdown-alert-title {
+      @apply text-emerald-600 dark:text-emerald-400;
+    }
+  }
+
+  /* IMPORTANT */
+  &.markdown-alert-important {
+    @apply border-purple-500/50 bg-purple-500/5;
+    .markdown-alert-title {
+      @apply text-purple-600 dark:text-purple-400;
+    }
+  }
+
+  /* WARNING */
+  &.markdown-alert-warning {
+    @apply border-amber-500/50 bg-amber-500/5;
+    .markdown-alert-title {
+      @apply text-amber-600 dark:text-amber-400;
+    }
+  }
+
+  /* CAUTION */
+  &.markdown-alert-caution {
+    @apply border-red-500/50 bg-red-500/5;
+    .markdown-alert-title {
+      @apply text-red-600 dark:text-red-400;
+    }
+  }
+}

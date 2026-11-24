@@ -86,6 +86,59 @@ const isActive = (path: string) => {
             About
           </a>
         </li>
+        <li class="group relative col-span-2">
+          <div
+            id="more-dropdown-btn"
+            class="flex w-full cursor-pointer items-center justify-center gap-1 px-4 py-3 font-medium hover:text-accent sm:w-auto sm:px-2 sm:py-1"
+          >
+            More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4 transition-transform group-hover:rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </div>
+          <ul
+            id="more-dropdown-items"
+            class:list={[
+              "hidden group-hover:block sm:absolute sm:top-full sm:right-0 sm:z-50 sm:mt-0 sm:min-w-[120px] sm:rounded sm:border sm:border-border sm:bg-background sm:p-2 sm:shadow-lg",
+              "w-full space-y-1 text-center sm:text-left",
+            ]}
+          >
+            <li>
+              <a
+                href="/now"
+                class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1"
+              >
+                Now
+              </a>
+            </li>
+            <li>
+              <a
+                href="/uses"
+                class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1"
+              >
+                Uses
+              </a>
+            </li>
+            <li>
+              <a
+                href="/jottings"
+                class="block px-4 py-2 hover:text-accent sm:px-2 sm:py-1"
+              >
+                Jottings
+              </a>
+            </li>
+          </ul>
+        </li>
+
         {
           SITE.showArchives && (
             <li class="col-span-2">
@@ -113,26 +166,58 @@ const isActive = (path: string) => {
               "focus-outline flex p-3 sm:p-1",
               { "[&>svg]:stroke-accent": isActive("/search") },
             ]}
-            title="Search"
+            title="搜索"
             aria-label="search"
           >
             <IconSearch />
-            <span class="sr-only">Search</span>
+            <span class="sr-only">搜索</span>
           </LinkButton>
         </li>
         {
           SITE.lightAndDarkMode && (
-            <li class="col-span-1 flex items-center justify-center">
+            <li class="group relative col-span-1 flex items-center justify-center">
               <button
                 id="theme-btn"
                 class="focus-outline relative size-12 p-4 sm:size-8 hover:[&>svg]:stroke-accent"
-                title="Toggles light & dark"
+                title="Select theme"
                 aria-label="auto"
                 aria-live="polite"
               >
                 <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
                 <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               </button>
+              <ul
+                id="theme-dropdown-items"
+                class:list={[
+                  "hidden group-hover:block sm:absolute sm:top-full sm:right-0 sm:z-50 sm:mt-0 sm:min-w-[100px] sm:rounded sm:border sm:border-border sm:bg-background sm:p-2 sm:shadow-lg",
+                  "w-full space-y-1 text-center sm:text-left",
+                ]}
+              >
+                <li>
+                  <button
+                    class="theme-select-btn block w-full px-4 py-2 text-center hover:text-accent sm:px-2 sm:py-1 sm:text-left"
+                    data-theme-val="light"
+                  >
+                    Light
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="theme-select-btn block w-full px-4 py-2 text-center hover:text-accent sm:px-2 sm:py-1 sm:text-left"
+                    data-theme-val="dark"
+                  >
+                    Dark
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="theme-select-btn block w-full px-4 py-2 text-center hover:text-accent sm:px-2 sm:py-1 sm:text-left"
+                    data-theme-val="system"
+                  >
+                    System
+                  </button>
+                </li>
+              </ul>
             </li>
           )
         }
@@ -160,6 +245,17 @@ const isActive = (path: string) => {
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
     });
+
+    // Handle More dropdown click toggle on mobile
+    const moreBtn = document.querySelector("#more-dropdown-btn");
+    const moreItems = document.querySelector("#more-dropdown-items");
+    if (moreBtn && moreItems) {
+      moreBtn.addEventListener("click", () => {
+        if (window.innerWidth < 640) {
+          moreItems.classList.toggle("hidden");
+        }
+      });
+    }
   }
 
   toggleNav();

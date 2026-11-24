@@ -1,5 +1,6 @@
 # build output
 dist/
+.wrangler/
 
 # generated types
 .astro/
@@ -24,5 +25,18 @@ pnpm-debug.log*
 .idea/
 
 # pagefind
-
 public/pagefind
+
+# Vault CMS / Obsidian
+.obsidian/
+src/contents/.obsidian/
+.ref/
+
+# Obsidian workspace files
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+
+# LLM related files
+.claude/
+.agents/
+CLAUDE.md
