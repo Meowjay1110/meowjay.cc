@@ -5,7 +5,11 @@
     "directory": "./dist",
     "not_found_handling": "404-page"
   },
-  "previews": {},
+  "previews": {
+    "vars": {
+      "ENVIRONMENT": "preview"
+    }
+  },
   "routes": [
     {
       "pattern": "www.meowjay.cc",
