@@ -41,6 +41,17 @@ jobs:
       - name: "Checking code format"
         run: pnpm run format:check
 
+      - name: "Cache Astro build artifacts"
+        uses: actions/cache@v6
+        with:
+          path: |
+            node_modules/.astro
+            .astro
+          key: astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            astro-${{ runner.os }}-
+
       - name: "Build the project"
         run: pnpm run build:check
         env:
