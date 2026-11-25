@@ -41,7 +41,7 @@ jobs:
       - name: "Checking code format"
         run: pnpm run format:check
 
-      - name: "Cache Astro build artifacts"
+      - name: "Restore Astro build artifacts cache"
         uses: actions/cache/restore@v6
         with:
           path: |
