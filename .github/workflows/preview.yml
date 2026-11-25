@@ -41,13 +41,13 @@ jobs:
       - name: "Checking code format"
         run: pnpm run format:check
 
-      - name: "Cache Astro build artifacts"
-        uses: actions/cache@v6
+      - name: "Restore Astro build artifacts cache"
+        uses: actions/cache/restore@v6
         with:
           path: |
             node_modules/.astro
             .astro
-          key: astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          key: astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
           restore-keys: |
             astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
             astro-${{ runner.os }}-
@@ -66,10 +66,19 @@ jobs:
           gitHubToken: ${{secrets.GITHUB_TOKEN}}
 
   cleanup:
+    name: Cleanup Preview
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - name: "Checkout repository"
+        uses: actions/checkout@v7
+
+      - name: "Install pnpm, node and dependencies"
+        uses: pnpm/setup@v3
+        with:
+          runtime: node@${{ matrix.node-version }}
+          cache: true
+
       - name: Delete Preview
         uses: cloudflare/wrangler-action@v4
         with:
