@@ -66,10 +66,19 @@ jobs:
           gitHubToken: ${{secrets.GITHUB_TOKEN}}
 
   cleanup:
+    name: Cleanup Preview
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - name: "Checkout repository"
+        uses: actions/checkout@v7
+
+      - name: "Install pnpm, node and dependencies"
+        uses: pnpm/setup@v3
+        with:
+          runtime: node@${{ matrix.node-version }}
+          cache: true
+
       - name: Delete Preview
         uses: cloudflare/wrangler-action@v4
         with:
