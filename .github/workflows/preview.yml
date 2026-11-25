@@ -5,11 +5,10 @@ permissions:
   pull-requests: write
 
 on:
+  push:
+    branches-ignore: main
   pull_request:
     types:
-      - opened
-      - edited
-      - synchronize
       - reopened
       - closed
   workflow_call:
@@ -49,11 +48,25 @@ jobs:
 
       - name: "Build the project"
         run: pnpm run build
+        env:
+          ENVIRONMENT: preview
 
       - name: "Deploy to Cloudflare Workers"
-        uses: cloudflare/wranger-action@v4
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: preview
           gitHubToken: ${{secrets.GITHUB_TOKEN}}
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Delete Preview
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: preview delete
