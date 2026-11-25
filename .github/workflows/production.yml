@@ -2,6 +2,7 @@ name: Production
 
 permissions:
   contents: read
+  deployments: write
 
 on:
   push:
