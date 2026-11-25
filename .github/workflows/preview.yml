@@ -26,26 +26,34 @@ jobs:
         node-version: [26]
 
     steps:
-      - name: "☁️ Checkout repository"
-        uses: actions/checkout@v4
+      - name: "Checkout repository"
+        uses: actions/checkout@v7
 
-      - name: "📦 Install pnpm"
-        uses: pnpm/action-setup@v4
+      - name: "Install pnpm"
+        uses: pnpm/action-setup@v6
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
 
-      - name: "📦 Install dependencies"
+      - name: "Install dependencies"
         run: pnpm install
 
-      - name: "🔎 Lint code"
+      - name: "Lint code"
         run: pnpm run lint
 
-      - name: "📝 Checking code format"
+      - name: "Checking code format"
         run: pnpm run format:check
 
-      - name: "🚀 Build the project"
+      - name: "Build the project"
         run: pnpm run build
+
+      - name: "Deploy to Cloudflare Workers"
+        uses: cloudflare/wranger-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: preview
+          gitHubToken: ${{secrets.GITHUB_TOKEN}}
