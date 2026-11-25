@@ -1,0 +1,78 @@
+name: Preview
+
+permissions:
+  contents: read
+  pull-requests: write
+  deployments: write
+
+on:
+  push:
+    branches-ignore: main
+  pull_request:
+    types:
+      - reopened
+      - closed
+  workflow_call:
+
+jobs:
+  preview:
+    name: Code standards & build
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    strategy:
+      matrix:
+        node-version: [26]
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v7
+
+      - name: "Install pnpm, node and dependencies"
+        uses: pnpm/setup@v3
+        with:
+          runtime: node@${{ matrix.node-version }}
+          cache: true
+
+      - name: "Lint code"
+        run: pnpm run lint
+
+      - name: "Checking code format"
+        run: pnpm run format:check
+
+      - name: "Cache Astro build artifacts"
+        uses: actions/cache@v6
+        with:
+          path: |
+            node_modules/.astro
+            .astro
+          key: astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            astro-${{ runner.os }}-
+
+      - name: "Build the project"
+        run: pnpm run build:check
+        env:
+          ENVIRONMENT: preview
+
+      - name: "Deploy to Cloudflare Workers"
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: preview
+          gitHubToken: ${{secrets.GITHUB_TOKEN}}
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Delete Preview
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: preview delete

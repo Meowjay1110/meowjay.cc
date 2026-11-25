@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build:check": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
@@ -51,5 +52,5 @@
     "typescript-eslint": "^8.61.1",
     "wrangler": "^4.152.0"
   },
-  "packageManager": "pnpm@12.15.0"
+  "packageManager": "pnpm@12.23.0"
 }
