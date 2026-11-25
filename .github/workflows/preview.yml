@@ -28,17 +28,11 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v7
 
-      - name: "Install pnpm"
-        uses: pnpm/action-setup@v6
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v7
+      - name: "Install pnpm, node and dependencies"
+        uses: pnpm/setup@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
-
-      - name: "Install dependencies"
-        run: pnpm install
+          runtime: node@${{ matrix.node-version }}
+          cache: true
 
       - name: "Lint code"
         run: pnpm run lint
@@ -47,7 +41,7 @@ jobs:
         run: pnpm run format:check
 
       - name: "Build the project"
-        run: pnpm run build
+        run: pnpm run build:check
         env:
           ENVIRONMENT: preview
 
