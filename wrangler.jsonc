@@ -12,10 +12,6 @@
   },
   "routes": [
     {
-      "pattern": "www.meowjay.cc",
-      "custom_domain": true
-    },
-    {
       "pattern": "meowjay.cc",
       "custom_domain": true,
       "previews_enabled": true
