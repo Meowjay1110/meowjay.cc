@@ -69,6 +69,11 @@ jobs:
     name: Cleanup Preview
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [26]
+
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@v7
