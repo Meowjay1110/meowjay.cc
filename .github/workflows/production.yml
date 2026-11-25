@@ -11,7 +11,7 @@ jobs:
   production:
     name: Build & deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
 
     strategy:
       matrix:
