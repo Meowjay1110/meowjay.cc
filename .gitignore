@@ -40,3 +40,9 @@ src/contents/.obsidian/
 .claude/
 .agents/
 CLAUDE.md
+
+# Syncthing related files
+.stfolder/
+.stversions/
+.stignore
+.stglobalignore
