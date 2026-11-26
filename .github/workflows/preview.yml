@@ -38,6 +38,9 @@ jobs:
       - name: "Lint code"
         run: pnpm run lint
 
+      - name: "Checking code format"
+        run: pnpm run format:check
+
       - name: "Restore Astro build artifacts cache"
         uses: actions/cache/restore@v6
         with:
