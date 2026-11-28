@@ -50,7 +50,7 @@
     "remark-footnotes-extra": "^0.3.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.61.1",
-    "wrangler": "^4.152.0"
+    "wrangler": "^4.168.0"
   },
   "packageManager": "pnpm@12.23.0"
 }
