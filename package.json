@@ -20,7 +20,7 @@
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "3.7.6",
     "@resvg/resvg-js": "^2.6.2",
-    "@tailwindcss/vite": "^4.3.1",
+    "@tailwindcss/vite": "^4.3.5",
     "@tuyuritio/remark-github-alert": "^1.0.0",
     "astro": "7.4.13",
     "dayjs": "^1.11.23",
